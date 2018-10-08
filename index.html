@@ -16,18 +16,46 @@
         <div class="header">
           <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
-              <div class="col-1">
-                <div class="logo"><img src="static/img/content/logo.png" alt="logo"></div>
+              <div class="col-md-2 col-lg-1">
+                <div class="logo d-none d-md-block"><img src="static/img/content/logo.png" alt="logo"></div>
               </div>
-              <div class="col-4">
-                <ul class="header-nav">
+              <div class="col-2 col-md-6 col-lg-6 col-xl-4">
+                <ul class="header-nav d-none d-md-block">
                   <li><a class="header-nav__link" href="#">О компании</a></li>
                   <li><a class="header-nav__link" href="#">Оптовикам</a></li>
                   <li><a class="header-nav__link" href="#">Доставка</a></li>
                   <li><a class="header-nav__link" href="#">Оплата</a></li>
                 </ul>
+                <nav id="my-menu">
+                  <ul class="header-nav">
+                    <li>
+                      <nav id="nav__mobile-menu">
+                        <div class="nav__mobile-line nav__mobile-line-top"></div>
+                        <div class="nav__mobile-line nav__mobile-line-middle"></div>
+                        <div class="nav__mobile-line nav__mobile-line-bottom"></div>
+                        <div class="nav__mobile-close nav__mobile-close-top"></div>
+                        <div class="nav__mobile-close nav__mobile-close-bottom"></div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav id="logo-content"><img src="static/img/content/logo.png" alt="logo">
+                        <p>База строительных материалов</p>
+                      </nav>
+                    </li>
+                    <li><a class="header-nav__link" href="#">Каталог</a></li>
+                    <li><a class="header-nav__link" href="#">О компании</a></li>
+                    <li><a class="header-nav__link" href="#">Оптовикам</a></li>
+                    <li><a class="header-nav__link" href="#">Доставка</a></li>
+                    <li><a class="header-nav__link" href="#">Оплата</a></li>
+                  </ul>
+                </nav>
+                <div class="d-block d-md-none" id="nav__mobile">
+                  <div class="nav__mobile-line nav__mobile-line-top"></div>
+                  <div class="nav__mobile-line nav__mobile-line-middle"></div>
+                  <div class="nav__mobile-line nav__mobile-line-bottom"></div>
+                </div>
               </div>
-              <div class="col-3">
+              <div class="col-3 d-none d-xl-block">
                 <div class="time"><span class="time-title">Время работы</span>
                   <div class="time-img"><img src="static/img/content/header/time.png" alt="time-img"></div>
                   <div class="time-active"><span class="day">Сегодня</span>
@@ -35,14 +63,20 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-8 col-sm-9 col-md-3 col-lg-5 col-xl-4">
                 <div class="call"><a class="call-phone" href="#"> +7 (342) 281 12 77</a><a class="g-btn" href="#">Обратный звонок</a></div>
+              </div>
+              <div class="col-2 col-sm-1 d-block d-lg-none">
+                <div class="bag"><img src="static/img/general/bag.png" alt="bag"><span class="count-bag__head">0</span></div>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <section class="navigation">
+      <div class="d-block d-sm-none" id="logo-content"><img src="static/img/content/logo.png" alt="logo">
+        <p>База строительных материалов</p>
+      </div>
+      <section class="navigation d-none d-lg-block">
         <div class="container">
           <div class="row">
             <ul class="nav-list">
@@ -52,12 +86,14 @@
               <li><a class="nav-list__link" href="#">Крепежные системы</a></li>
               <li><a class="nav-list__link" href="#">Инструмент</a></li>
               <li><a class="nav-list__link" href="#">Спецодежда</a></li>
-              <li><img class="bag" src="static/img/general/bag.png" alt="bag"></li>
+              <li>
+                <div class="bag"><img src="static/img/general/bag.png" alt="bag"><span class="count-bag">0</span></div>
+              </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="slider">
+      <section class="slider d-none d-md-block">
         <div class="js-slider">
           <div class="slide">
             <div class="container h-100">
@@ -66,7 +102,7 @@
                   <div class="slide-title">
                     <h1>База строительных материалов</h1>
                     <p>Все строительные  материалы в одном месте</p>
-                  </div><a class="slide-btn" href="#"><span>В каталог</span></a>
+                  </div><a class="slide-btn" href="katalog-line.html"><span>В каталог</span></a>
                 </div>
               </div>
             </div>
@@ -99,18 +135,28 @@
       </section>
       <section class="search">
         <div class="container h-100">
-          <div class="search-content">
-            <div class="row h-100 justify-content-between align-items-center">
-              <div class="col-3">
-                <div class="search-title">
-                  <p>Поиск товаров</p>
+          <div class="row">
+            <div class="search-content">
+              <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-3 d-none d-sm-block">
+                  <div class="search-title">
+                    <p>Поиск товаров</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-9">
-                <input class="search-input" type="text" name="text" placeholder="Например: строительная смесь">
-                <label for="btn">
-                  <input class="g-btn" id="btn" type="submit" value="Подобрать">
-                </label>
+                <div class="col-6 col-lg-7 d-none d-sm-block">
+                  <input class="search-input" type="text" name="text" placeholder="Например: строительная смесь">
+                </div>
+                <div class="col-3 col-lg-2 d-none d-sm-block">
+                  <label for="btn">
+                    <input class="g-btn" id="btn" type="submit" value="Подобрать">
+                  </label>
+                </div>
+                <div class="col-11 d-block d-sm-none">
+                  <input class="search-input" type="text" name="text" placeholder="Поиск по каталогу">
+                  <label for="btn">
+                    <input class="g-btn" id="btn" type="submit" value="">
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -118,86 +164,114 @@
       </section>
       <section class="items">
         <div class="container">
-          <div class="row">
-            <div class="col-3">
-              <div class="item">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="item d-none d-sm-block">
+                <div class="item-title">
+                  <p>Материалы для строительства</p>
+                </div>
+                <div class="item-desc item-desc__akk"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
+              </div>
+              <div class="item-akk d-block d-sm-none">
+                <div class="item-title__akk">
+                  <p>Материалы для строительства</p>
+                </div>
+                <div class="item-desc__akk"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="item d-none d-sm-block">
+                <div class="item-title">
+                  <p>Материалы для внутренней отделки</p>
+                </div>
+                <div class="item-desc"><a class="item-desc__link" href="#">Обои</a><a class="item-desc__link" href="#">Лакокрасочные материалы</a><a class="item-desc__link" href="#">Напольные покрытия</a><a class="item-desc__link" href="#">Плитка керамическая</a><a class="item-desc__link" href="#">Потолок подвесной</a></div>
+              </div>
+              <div class="item-akk d-block d-sm-none">
+                <div class="item-title__akk">
+                  <p>Материалы для внутренней отделки</p>
+                </div>
+                <div class="item-desc__akk"><a class="item-desc__link" href="#">Обои</a><a class="item-desc__link" href="#">Лакокрасочные материалы</a><a class="item-desc__link" href="#">Напольные покрытия</a><a class="item-desc__link" href="#">Плитка керамическая</a><a class="item-desc__link" href="#">Потолок подвесной</a></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="item d-none d-sm-block">
+                <div class="item-title">
+                  <p>Инженерные системы</p>
+                </div>
+                <div class="item-desc"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
+              </div>
+              <div class="item-akk d-block d-sm-none">
+                <div class="item-title__akk">
+                  <p>Инженерные системы</p>
+                </div>
+                <div class="item-desc__akk"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="item d-none d-sm-block">
                 <div class="item-title">
                   <p>Материалы для строительства</p>
                 </div>
                 <div class="item-desc"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
               </div>
-            </div>
-            <div class="col-3">
-              <div class="item">
-                <div class="item-title">
+              <div class="item-akk d-block d-sm-none">
+                <div class="item-title__akk">
                   <p>Материалы для строительства</p>
                 </div>
-                <div class="item-desc"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a></div>
+                <div class="item-desc__akk"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="item">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="item d-none d-sm-block">
                 <div class="item-title">
-                  <p>Материалы для строительства</p>
+                  <p>Инженерные системы</p>
                 </div>
                 <div class="item-desc"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
               </div>
+              <div class="item-akk d-block d-sm-none">
+                <div class="item-title__akk">
+                  <p>Инженерные системы</p>
+                </div>
+                <div class="item-desc__akk"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
+              </div>
             </div>
-            <div class="col-3">
-              <div class="item">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="item d-none d-sm-block">
                 <div class="item-title">
-                  <p>Материалы для строительства</p>
+                  <p>Инженерные системы</p>
                 </div>
                 <div class="item-desc"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
               </div>
-            </div>
-            <div class="col-3">
-              <div class="item">
-                <div class="item-title">
-                  <p>Материалы для строительства</p>
+              <div class="item-akk d-block d-sm-none">
+                <div class="item-title__akk">
+                  <p>Инженерные системы</p>
                 </div>
-                <div class="item-desc"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
+                <div class="item-desc__akk"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="item">
-                <div class="item-title">
-                  <p>Материалы для строительства</p>
-                </div>
-                <div class="item-desc"><a class="item-desc__link" href="#">Кирпичи и блоки</a><a class="item-desc__link" href="#">Сетки</a><a class="item-desc__link" href="#">Сухие строительные смеси</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="item-desc__link" href="#">Листовой материал</a><a class="item-desc__link" href="#">Гипсокартон и элементы</a><a class="g-btn" href="#">Еще</a></div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="item-download">
-                <div class="item-img d-flex align-items-center justify-content-center"><img src="static/img/content/cloud.png" alt="cloud"></div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3"><a class="item-download" href="#">
+                <div class="item-img"><img src="static/img/content/cloud.png" alt="cloud"></div>
                 <div class="item-download__desc">
                   <p>Прайс</p><span>Скачать файл в формате xls</span>
-                </div>
-              </div>
-              <div class="btn-download"> <a href="#">Скачать</a></div>
-            </div>
-            <div class="col-3">
-              <div class="item-download item-kp">
-                <div class="item-img d-flex align-items-center justify-content-center"><img src="static/img/content/notepad.png" alt="notepad"></div>
+                </div></a><a class="btn-download d-none d-md-block" href="#">Скачать</a></div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3"><a class="item-download item-kp" href="#">
+                <div class="item-img"><img src="static/img/content/notepad.png" alt="notepad"></div>
                 <div class="item-download__desc">
                   <p>Коммерческое предложение</p><span>Скачать файл в формате PDF</span>
-                </div>
-              </div>
-              <div class="btn-download"> <a href="#">Скачать</a></div>
-            </div>
-            <div class="col-6">
+                </div></a><a class="btn-download d-none d-md-block" href="#">Скачать</a></div>
+            <div class="col-12 col-lg-6">
               <div class="item-post">
                 <p>Аренда</p><span>Доступна аренда помещений по адресу Фоминская 50. Офисные и складские помещения.</span><a href="#">Подробнее</a>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-6 col-lg-3 d-none d-sm-block">
               <div class="item-adv adv-1">
                 <div class="item-adv__wrap">
                   <p>45 000</p><span>Наименований товаров</span>
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-6 col-lg-3 d-none d-sm-block">
               <div class="item-adv adv-2">
                 <div class="item-adv__wrap">
                   <p>25</p><span>Лет на рынке</span>
@@ -207,21 +281,25 @@
           </div>
         </div>
       </section>
-      <section class="circle">
+      <section class="circle d-none d-md-block">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-10">
+            <div class="col-md-12 col-lg-11">
               <ul class="circle-list">
-                <li class="circle-item">
+                <li>
+                  <div class="circle-item"> </div>
                   <p>Взаимозачеты</p>
                 </li>
-                <li class="circle-item">
+                <li>
+                  <div class="circle-item"> </div>
                   <p>Отсрочка платежа</p>
                 </li>
-                <li class="circle-item">
+                <li>
+                  <div class="circle-item"> </div>
                   <p>Скидки</p>
                 </li>
-                <li class="circle-item">
+                <li>
+                  <div class="circle-item"> </div>
                   <p>Доставка</p>
                 </li>
               </ul>
@@ -232,15 +310,19 @@
       <section class="sub">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="sub-line"><img src="static/img/sprite/line.png" alt="line"></div>
-            <div class="sub-content">
-              <p class="sub-title">Будь в курсе</p>
-              <p class="sub-desc">Узнавай о скидках и акциях первым</p>
-              <div class="sub-input">
-                <input type="text" name="email" placeholder="Введите ваш email">
-                <label for="btn">
-                  <input class="g-btn" id="btn" type="submit" value="Подписаться">
-                </label>
+            <div class="col-12">
+              <div class="sub-line d-none d-md-block"><img src="static/img/sprite/line.png" alt="line"></div>
+            </div>
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+              <div class="sub-content">
+                <p class="sub-title">Будь в курсе</p>
+                <p class="sub-desc">Узнавай о скидках и акциях первым</p>
+                <div class="sub-input">
+                  <input type="text" name="email" placeholder="Введите ваш email">
+                  <label for="btn">
+                    <input class="g-btn" id="btn" type="submit" value="Подписаться">
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -257,7 +339,7 @@
         <div class="container">
           <div class="footer-top">
             <div class="row">
-              <div class="col-3">
+              <div class="col-6 col-lg-3 d-none d-sm-block">
                 <div class="footer-item">
                   <div class="footer-title">
                     <p>Для поставщиков</p>
@@ -267,7 +349,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-lg-3 d-none d-sm-block">
                 <div class="footer-item">
                   <div class="footer-title">
                     <p>Для покупателей</p>
@@ -277,7 +359,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-12 col-sm-6 col-lg-3">
                 <div class="footer-item">
                   <div class="footer-title">
                     <p>Офис</p>
@@ -287,7 +369,7 @@
                   </div><a href="#">8 (342) 281 12 77, </a><a href="#">8 (342) 246 01 38</a>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-12 col-sm-6 col-lg-3">
                 <div class="footer-item">
                   <div class="footer-title">
                     <p>База</p>
@@ -301,8 +383,8 @@
           </div>
           <div class="footer-bottom">
             <div class="row">
-              <div class="col-6">
-                <ul class="footer-list">
+              <div class="col-12 col-lg-7">
+                <ul class="footer-list d-none d-sm-block">
                   <li><a class="footer-list__link" href="#">Главная</a></li>
                   <li><a class="footer-list__link" href="#">Продукция</a></li>
                   <li><a class="footer-list__link" href="#">Прайс</a></li>
@@ -311,7 +393,7 @@
                   <li><a class="footer-list__link" href="#">О компании</a></li>
                 </ul>
               </div>
-              <div class="col-6">
+              <div class="col-12 col-lg-5">
                 <div class="footer-bottom__desc"> <span>© 2018. Все права защищены ООО "Лотос"</span></div>
               </div>
             </div>

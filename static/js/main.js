@@ -1,9 +1,75 @@
-;
+
 // Начинать писать отсюда!!!!
 
 $(document).ready(function(){
 
-  $(".item").equalHeights();
+  ////////////// Akkordeon /////////////////
+
+  $(".item-title__akk").on("click", function(){
+    
+    var $this = $(this),
+      container = $this.closest('.items'),
+      item = $this.closest('.item-akk'),
+      currentContent = item.find('.item-desc__akk'),
+      duration = 600
+
+    
+    if(!item.hasClass('active')){
+
+      item.addClass('active');
+      currentContent.slideDown(duration);
+      // open.removeClass('active');
+      
+    }else{
+        
+      item.removeClass('active');
+      currentContent.slideUp();
+      // open.addClass('active');
+    }
+  });
+
+  ////////////// mmenu /////////////////
+
+    var $menu = $("#my-menu").mmenu({
+      "navbar": {
+        "title": ""
+      },
+      extensions: ['theme-white', 'position-front'],
+    });
+
+      
+
+    var $icon = $("#nav__mobile");
+    var API = $menu.data( "mmenu" );
+    $icon.on( "click", function() {
+        API.open();
+    });
+
+    API.bind( "opened", function() {
+       setTimeout(function() {
+          $icon.addClass( "is-active" );
+       }, 100);
+       $icon.on( "click", function() {
+          API.close();
+       });
+    });
+
+   API.bind( "closed", function() {
+      setTimeout(function() {
+         $icon.removeClass( "is-active" );
+      }, 100);
+      $icon.on( "click", function() {
+         API.open();
+      });
+    });
+
+   $("#nav__mobile-menu").click(function() {
+      API.close ();
+    });
+
+   //////////////////////////////////
+
+  // $(".item").equalHeights();
 
 	$('.js-slider').slick({
   speed: 300,
