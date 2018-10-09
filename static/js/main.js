@@ -3,6 +3,15 @@
 
 $(document).ready(function(){
 
+  $(".basket").on("click", function(){
+    $(".basket-content").toggleClass('active');
+    $(".basket").toggleClass('active');
+  });
+
+  $(".search-button").on("click", function(){
+    $(".search-content__sort").toggleClass('active');
+  });
+
   ////////////// Akkordeon /////////////////
 
   $(".item-title__akk").on("click", function(){
@@ -11,6 +20,31 @@ $(document).ready(function(){
       container = $this.closest('.items'),
       item = $this.closest('.item-akk'),
       currentContent = item.find('.item-desc__akk'),
+      duration = 600
+
+    
+    if(!item.hasClass('active')){
+
+      item.addClass('active');
+      currentContent.slideDown(duration);
+      // open.removeClass('active');
+      
+    }else{
+        
+      item.removeClass('active');
+      currentContent.slideUp();
+      // open.addClass('active');
+    }
+  });
+
+  ////////////// Akkordeon 2 /////////////////
+
+  $(".category-title").on("click", function(){
+    
+    var $this = $(this),
+      container = $this.closest('.categories'),
+      item = $this.closest('.category'),
+      currentContent = item.find('.category-content'),
       duration = 600
 
     
