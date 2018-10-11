@@ -4247,6 +4247,12 @@ button {
     margin-top: 20px;
     transform: translateY(0);
   }
+  .product-counter {
+    float: left;
+  }
+  .product-price {
+    float: right;
+  }
 }
 @media screen and (max-width: 920px) {
   .nav-list li:last-child {
@@ -4275,12 +4281,6 @@ button {
     position: static;
     width: 95%;
   }
-  .product-counter {
-    float: left;
-  }
-  .product-price {
-    float: right;
-  }
 }
 @media screen and (max-width: 800px) {
   .header-nav__link {
@@ -4308,6 +4308,9 @@ button {
   }
   .product-coub .product-title {
     margin-top: 30px;
+  }
+  .product-line {
+    text-align: center;
   }
 }
 @media screen and (max-width: 767px) {
@@ -4433,9 +4436,6 @@ button {
   }
   .basket-content__head {
     width: 90%;
-  }
-  .product-line {
-    text-align: center;
   }
 }
 @media screen and (max-width: 400px) {
