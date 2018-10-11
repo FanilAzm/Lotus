@@ -3262,6 +3262,7 @@ button {
   background-color: #03bd5b;
   width: 100%;
   margin: 0;
+  border: none;
   cursor: pointer;
 }
 .search-input {
@@ -3768,8 +3769,7 @@ button {
   color: #54657e;
   background-color: #eceff4;
   border: 1px solid #c9d3df;
-  overflow: auto;
-  text-overflow: ellipsis;
+  border-radius: 5px;
   z-index: 3;
 }
 .katalog-select:after {
@@ -4002,7 +4002,7 @@ button {
 }
 .product-counter .up {
   left: 100%;
-  top: -1px;
+  top: 0;
 }
 .product-counter .up:before {
   content: '';
@@ -4018,7 +4018,7 @@ button {
 }
 .product-counter .down {
   left: 100%;
-  bottom: 1px;
+  bottom: 0;
 }
 .product-counter .down:before {
   content: '';
