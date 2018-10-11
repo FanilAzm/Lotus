@@ -3227,10 +3227,8 @@ button {
   display: none;
 }
 .nav-list .basket.active .bag-full {
-  display: inline-block;
-}
-.nav-list .basket.active .bag-full img {
   padding: 0;
+  display: inline-block;
 }
 .nav-list__link {
   display: inline-block;
@@ -4196,6 +4194,9 @@ button {
   }
   .nav-list .basket {
     height: 60px;
+  }
+  .nav-list .basket.active .bag-full {
+    padding: 0;
   }
   .product-coub .product-counter {
     width: 40px;
