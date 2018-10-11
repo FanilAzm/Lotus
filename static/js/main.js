@@ -3,6 +3,11 @@
 
 $(document).ready(function(){
 
+  $(".basket-head").on("click", function(){
+    $(".basket-content__head").toggleClass('active');
+    $(".basket-head").toggleClass('active');
+  });
+
   $(".basket").on("click", function(){
     $(".basket-content").toggleClass('active');
     $(".basket").toggleClass('active');
