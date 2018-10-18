@@ -3274,6 +3274,9 @@ button {
   font-size: 1.563rem;
   text-transform: uppercase;
 }
+.slider {
+  overflow-x: hidden;
+}
 .slider .slick-dots {
   bottom: 130px;
   position: relative;
