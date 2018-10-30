@@ -3252,8 +3252,17 @@ button {
 }
 .search-content label,
 .search-content__sort label {
-  width: 100%;
-  margin: 0;
+  width: 30%;
+  margin: 2px 0;
+  float: right;
+}
+.search-content form,
+.search-content__sort form {
+  position: static;
+}
+.search-content form .g-btn,
+.search-content__sort form .g-btn {
+  z-index: 5;
 }
 .search-content .g-btn,
 .search-content__sort .g-btn {
@@ -3264,7 +3273,7 @@ button {
   cursor: pointer;
 }
 .search-input {
-  width: 100%;
+  width: 65%;
   padding: 15px;
   border-radius: 5px;
   border: 1px solid #c9d3df;
@@ -3590,6 +3599,13 @@ button {
   background-color: #9dbf15;
   font-size: 0.875rem;
 }
+.sub-content form {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .sub-line img {
   width: 100%;
 }
@@ -3794,12 +3810,14 @@ button {
   height: 45px;
   line-height: 45px;
   display: inline-block;
+  vertical-align: middle;
   text-align: center;
   background-color: #eceff4;
 }
 .tabs-item svg {
   width: 15px;
   height: 16px;
+  margin-bottom: 4px;
   fill: #8393a7;
 }
 .tabs-item:first-child {
@@ -3841,15 +3859,37 @@ button {
 .basket-head.active .bag-full {
   display: block;
 }
+form {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 80px;
+}
 .search-button {
   display: inline-block;
   float: right;
-  padding-right: 20px;
   cursor: pointer;
+}
+.search-button button,
+.search-button img {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
+.search-button button {
+  padding: 13px;
+  z-index: 10;
+  background-color: transparent;
+}
+.search-button img {
+  z-index: 50;
+}
+.search-button.active button {
+  z-index: 51;
 }
 .search-content__sort {
   display: none;
-  width: 78%;
+  width: 90%;
   height: auto;
   top: 0;
   bottom: auto;
@@ -3857,9 +3897,9 @@ button {
   box-shadow: none;
 }
 .search-content__sort .search-input {
+  width: 100%;
   height: 45px;
   line-height: normal;
-  padding: 0 15px;
   vertical-align: middle;
 }
 .search-content__sort.active {
@@ -4224,6 +4264,13 @@ button {
     font-size: 1.25rem;
     line-height: 1.3;
   }
+  form {
+    right: 50px;
+  }
+  .search-button button,
+  .search-button img {
+    right: auto;
+  }
   .footer-item {
     margin-bottom: 40px;
   }
@@ -4239,9 +4286,6 @@ button {
   }
   .katalog-select {
     margin-left: 0;
-  }
-  .search-content__sort {
-    width: 70%;
   }
   .product-line {
     height: auto;
@@ -4278,11 +4322,21 @@ button {
   .basket-content {
     top: 150px;
   }
-  .search-button {
-    padding-right: 25px;
+  form {
+    top: auto;
+    bottom: 0;
+    left: 25px;
+    right: 60px;
+  }
+  .search-button button,
+  .search-button img {
+    top: auto;
+    bottom: 22px;
   }
   .search-content__sort {
     position: static;
+    top: auto;
+    bottom: 0;
     width: 95%;
   }
 }
@@ -4361,6 +4415,9 @@ button {
     padding: 0;
     border: none;
     background-color: transparent;
+  }
+  .search-input {
+    width: 100%;
   }
   .item-akk:after {
     display: none;

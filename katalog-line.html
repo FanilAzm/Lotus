@@ -11,7 +11,7 @@
     </title>
   </head>
   <body>
-    <div class="wrapper bg-gray">
+    <div class="wrapper">
       <header>
         <div class="header">
           <div class="container h-100">
@@ -141,10 +141,14 @@
 <path id="List-Icon" serif:id="List Icon" d="M15,10l-10,0c-0.552,0 -1,-0.448 -1,-1c0,-0.553 0.448,-1.001 1,-1.001l10,0c0.552,0 1,0.448 1,1.001c0,0.552 -0.448,1 -1,1Zm0,-4l-10,0c-0.552,0 -1,-0.448 -1,-1c0,-0.553 0.448,-1 1,-1l10,0c0.552,0 1,0.447 1,1c0,0.552 -0.448,1 -1,1Zm0,-4l-10,0c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1l10,0c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1Zm-14,12c-0.552,0 -1,-0.448 -1,-1c0,-0.553 0.448,-1 1,-1c0.552,0 1,0.447 1,1c0,0.552 -0.448,1 -1,1Zm0,-4c-0.552,0 -1,-0.448 -1,-1c0,-0.553 0.448,-1.001 1,-1.001c0.552,0 1,0.448 1,1.001c0,0.552 -0.448,1 -1,1Zm0,-4c-0.552,0 -1,-0.448 -1,-1c0,-0.553 0.448,-1 1,-1c0.552,0 1,0.447 1,1c0,0.552 -0.448,1 -1,1Zm0,-4c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1Zm4,10l10,0c0.552,0 1,0.447 1,1c0,0.552 -0.448,1 -1,1l-10,0c-0.552,0 -1,-0.448 -1,-1c0,-0.553 0.448,-1 1,-1Z"/>
 </svg></a></div>
                   <div class="basket d-none d-lg-inline-block"><img class="bag-clear" src="static/img/general/bag-clear.png" alt="Bag-clear"><img class="bag-full" src="static/img/general/bag-add.png" alt="Bag-add"></div>
-                  <div class="search-button"><img src="static/img/content/search.png" alt="search"></div>
-                  <div class="search-content__sort">
-                    <input class="search-input" type="text" name="text" placeholder="Поиск по каталогу">
-                  </div>
+                  <form role="search" action="" method="GET">
+                    <div class="search-button">
+                      <button class="btn btn-search" type="submit"></button><img src="static/img/content/search.png" alt="search">
+                    </div>
+                    <div class="search-content__sort">
+                      <input class="search-input" name="query" placeholder="Поиск по каталогу" value="">
+                    </div>
+                  </form>
                 </div>
                 <div class="basket-content">
                   <div class="basket-title"><span class="basket-count">3 товара </span><span>в корзине</span></div>

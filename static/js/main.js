@@ -13,8 +13,9 @@ $(document).ready(function(){
     $(".basket").toggleClass('active');
   });
 
-  $(".search-button").on("click", function(){
-    $(".search-content__sort").toggleClass('active');
+  $(".search-button img").on("click", function(){
+    $(".search-button").addClass('active');
+    $(".search-content__sort").addClass('active');
   });
 
   ////////////// Akkordeon /////////////////
