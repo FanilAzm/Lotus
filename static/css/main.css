@@ -3369,6 +3369,10 @@ button {
 }
 .item .g-btn,
 .item-akk .g-btn {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
   display: block;
   margin: 0;
   margin-top: 30px;
@@ -4006,6 +4010,7 @@ form {
   margin-left: 25px;
 }
 .product-title p {
+  max-width: 400px;
   color: #222f47;
 }
 .product-title span {
