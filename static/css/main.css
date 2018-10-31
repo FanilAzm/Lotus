@@ -3411,6 +3411,9 @@ button {
 .item-akk {
   height: auto;
 }
+.item-akk .g-btn {
+  position: static;
+}
 .item-desc__akk {
   display: block;
 }
