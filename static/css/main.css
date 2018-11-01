@@ -4023,6 +4023,7 @@ form {
 .product-active {
   position: absolute;
   top: 50%;
+  left: auto;
   right: 20px;
   transform: translateY(-50%);
 }
