@@ -5,12 +5,12 @@ $(document).ready(function(){
 
   $(".basket-head").on("click", function(){
     $(".basket-content__head").toggleClass('active');
-    $(".basket-head").toggleClass('active');
+    $(".basket-head").addClass('active');
   });
 
   $(".basket").on("click", function(){
     $(".basket-content").toggleClass('active');
-    $(".basket").toggleClass('active');
+    $(".basket").addClass('active');
   });
 
   $(".search-button img").on("click", function(){
