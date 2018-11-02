@@ -3200,6 +3200,7 @@ button {
 #hidden-form .g-btn {
   margin: 0;
   margin-top: 30px;
+  border: none;
 }
 #hidden-form .thanks {
   display: none;
@@ -4155,6 +4156,11 @@ form {
 .product-price a {
   color: #fff;
 }
+.product-price svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
 .product-coub {
   position: relative;
   text-align: center;
@@ -4310,6 +4316,9 @@ form {
   .call .g-btn {
     display: none;
   }
+  .header-nav {
+    text-align: right;
+  }
   .nav-list__link {
     font-size: 0.875rem;
   }
@@ -4361,6 +4370,9 @@ form {
   }
 }
 @media screen and (max-width: 860px) {
+  .header-nav__link {
+    font-size: 0.875rem;
+  }
   .katalog-sort {
     height: auto;
   }
@@ -4404,9 +4416,6 @@ form {
   }
   .search-content {
     padding: 0 20px;
-  }
-  .header-nav__link {
-    font-size: 0.875rem;
   }
   .item-title {
     padding-bottom: 25px;
