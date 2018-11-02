@@ -3,6 +3,27 @@
 
 $(document).ready(function(){
 
+  $("#callback").mask("+7 (999) 999-9999");
+
+  ////////////// modal ///////////////////
+
+  $(".fancybox").fancybox({
+      prevEffect  : 'none',
+      nextEffect  : 'none',
+      helpers : {
+        title : {
+            type: 'outside'
+        },
+        thumbs  : {
+            width : 50,
+            height  : 50
+        }
+      }
+    }
+  );
+
+  ///////////////// click /////////////////
+
   $(".basket-head").on("click", function(){
     $(".basket-content__head").toggleClass('active');
     // $(".basket-head").addClass('active');
