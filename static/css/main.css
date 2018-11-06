@@ -4152,6 +4152,7 @@ form {
   line-height: 40px;
   border-radius: 5px;
   background-color: #0082d5;
+  cursor: pointer;
 }
 .product-price a {
   color: #fff;
