@@ -3365,7 +3365,6 @@ button {
   display: none;
 }
 .slide {
-  background-image: url("../../static/img/content/slide.png");
   background-size: cover;
   background-position: center;
   height: 600px;
